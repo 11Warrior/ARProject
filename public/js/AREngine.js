@@ -4,22 +4,23 @@ class ARWorkoutEngine {
     constructor({
         userVideo = "",
         userStream = "",
-        userCanvas=""
+        userCanvas = "",
+        workoutType = "bicep"
     } = {}) {
-        this.userVideo=userVideo
-        this.userCanvas=userCanvas
-        this.userStream=userStream
-        this.userCanvas.height= this.userVideo.videoHeight
-        this.userCanvas.width= this.userVideo.videoWidth
-        this.userCanvasContext=this.userCanvas.getContext("2d");
+        this.userVideo = userVideo
+        this.userCanvas = userCanvas
+        this.userStream = userStream
+        this.workoutType = workoutType
+        this.userCanvas.height = this.userVideo.videoHeight
+        this.userCanvas.width = this.userVideo.videoWidth
+        this.userCanvasContext = this.userCanvas.getContext("2d");
         this.userCanvasContext.translate(this.userCanvas.width, 0);
         this.userCanvasContext.scale(-1, 1);
         this.initializePoseNet()
         this.initializeCamera()
-        this.POSENET_LOADED=false
-        this.sketcher=new Sketcher(this.userCanvas)
+        this.POSENET_LOADED = false
+        this.sketcher = new Sketcher(this.userCanvas, this.workoutType)
         ARWorkoutEngine.setInstance(this)
-
     }
     async initializePoseNet(){
         const detectorConfig = {modelType: poseDetection.movenet.modelType.SINGLEPOSE_LIGHTNING};

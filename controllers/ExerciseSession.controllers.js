@@ -37,7 +37,8 @@ const getSessions = async (req, res, next) => {
 }
 
 const workout = async (req, res, next) => {
-    return res.render('workout')
+    const workoutType = req.query.type || 'bicep';
+    return res.render('workout', { workoutType });
 }
 
 module.exports = {

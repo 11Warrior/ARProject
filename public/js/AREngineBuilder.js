@@ -1,7 +1,7 @@
 class ARWorkoutEngineBuilder  {
 
     constructor(){
-        
+        this.workoutType = 'bicep';
     }
 
     addUserVideo(userVideo){
@@ -15,6 +15,10 @@ class ARWorkoutEngineBuilder  {
     addUserCanvas(userCanvas){
         this.userCanvas=userCanvas
         return this
+    }
+    addWorkoutType(workoutType) {
+        this.workoutType = workoutType;
+        return this;
     }
     
     build(){

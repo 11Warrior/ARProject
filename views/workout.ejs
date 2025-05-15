@@ -1,4 +1,5 @@
 <%- include('header') %>
+<body class="bg-zinc-900 min-h-screen">
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <script src="/js/camera_utils.js"></script>
   <!-- Require the peer dependencies of pose-detection. -->
@@ -83,10 +84,10 @@
       color: #fff;
     }
   </style>
-
-  <div class="workout-main-container bg-zinc-900 flex items-center justify-center">
+  <div class=" main h-full w-full bg-zinc-900">
+    <div class="workout-main-container flex items-center justify-center mt-5">
     <div class="exercise-demo">
-      <img src="/images/biceps.gif" alt="Exercise Demo" />
+      <img class="w-150 h-120 object-cover object-center" src="/images/<%= workoutType %>.gif" alt="Exercise Demo" />
     </div>
     <div class="ar-container">
       <video id="user-video"></video>
@@ -96,14 +97,14 @@
   </div>
 
   <div class="info-row">
-    <div class="info-box">
+    <!-- <div class="info-box">
       <span class="info-label">Current Step:</span>
       <span id="current-step">1</span>
     </div>
     <div class="info-box">
       <span class="info-label">Next Step:</span>
       <span id="next-step">0</span>
-    </div>
+    </div> -->
     <div class="info-box">
       <span class="info-label">Your visibility:</span>
       <span id="user-visibility">visible</span>
@@ -113,8 +114,11 @@
       <span id="reps">0</span>
     </div>
   </div>
+  </div>
 
   <script>
+    const workoutType = '<%= workoutType %>';
+    
     navigator.mediaDevices
       .getUserMedia({
         video: {
@@ -132,6 +136,7 @@
             .addUserVideo(video)
             .addUserStream(stream)
             .addUserCanvas($('#user-canvas').get(0))
+            .addWorkoutType(workoutType)
             .build()
         };
       })
@@ -162,3 +167,4 @@
     // In your AR engine, call incrementReps() whenever a rep is detected
   </script>
   <%- include('footer') %>
+</body>

@@ -1,34 +1,53 @@
 <%- include('header') %>
-
-  <div class="dashboard-cards-container" >
-    <div class="row">
-        <div class="col s12 m4">
-          <div class="card-panel teal">
-            <span class="white-text">Available Workouts
-            </span>
-          </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>mytitle</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+  <div class="main bg-zinc-900 w-full h-screen">
+    <div class="workouts flex flex-row">
+      <div class="workoutcard w-80 h-112 bg-zinc-800 rounded-lg mt-4 ml-3 p-2">
+        <h5 class="font-bold p-1 text-green-500">Pushups</h5>
+        <a href="/exercise/workout?type=pushup">
+          <img class="w-full h-50 object-cover rounded-lg" src="/images/pushup.avif" alt="Pushup Image not Found">
+        </a>
+        <div class="w-full h-30 bg-zinc-500 p-2 rounded-lg mt-3">
+          <ul class="text-emerald-100">
+            <li>-> It is the exercise mainly targetting for chest and triceps.</li>
+          </ul>
         </div>
-<div class="main-workout-list flex">
-  <div class="row workout list">
-    <div class="col s12 m4">
-      <div class="card-panel ">
-        <a href="/exercise/workout">
-        <img class="img-fluid" src="/images/triceps.jpg"/>
+      </div>
+
+      <div class="workoutcard w-80 h-112 bg-zinc-800 rounded-lg mt-4 ml-3 p-2">
+        <h5 class="font-bold p-1 text-green-500">Bicep Curls</h5>
+        <a href="/exercise/workout?type=biceps">
+          <img class="w-full h-50 object-cover rounded-lg" src="/images/biceps.jpg" alt="Bicep Curl Image not Found">
         </a>
+        <div class="w-full h-30 bg-zinc-500 p-2 rounded-lg mt-3">
+          <ul class="text-emerald-100">
+            <li>-> It is the exercise mainly targetting for biceps and forearms.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="workoutcard w-80 h-112 bg-zinc-800 rounded-lg mt-4 ml-3 p-2">
+        <h5 class="font-bold p-1 text-green-500">Situps</h5>
+        <a href="/exercise/workout?type=situp">
+          <img class="w-full h-50 object-cover rounded-lg" src="/images/situps.jpg" alt="Situp Image not Found">
+        </a>
+        <div class="w-full h-30 bg-zinc-500 p-2 rounded-lg mt-3">
+          <ul class="text-emerald-100">
+            <li>-> It is the exercise mainly targetting for core and abdominal muscles.</li>
+          </ul>
+        </div>
       </div>
     </div>
+  </div>  
+</body>
+</html>
 
-    <div class="col s12 m4">
-      <div class="card-panel ">
-        <a href="/exercise/workout">
-          <img class="img-fluid" src="/images/biceps.jpg"/>
-        </a>
-      </div>
-    </div>
-  </div>
-</div> 
-</div>
-
-]
 <%- include('footer') %>
-
