@@ -4,49 +4,145 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>mytitle</title>
+  <title>HomeFitness</title>
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
-  <div class="main bg-zinc-900 w-full h-screen">
-    <div class="workouts flex flex-row">
-      <div class="workoutcard w-80 h-112 bg-zinc-800 rounded-lg mt-4 ml-3 p-2">
-        <h5 class="font-bold p-1 text-green-500">Pushups</h5>
+  <div class="main bg-zinc-900 w-full h-screen flex flex-col pt-16">
+    <div class="allworkouts w-full ">
+      <div class="workouts flex flex-row overflow-x-auto pl-4 pr-4 pb-4">
         <a href="/exercise/workout?type=pushup">
-          <img class="w-full h-50 object-cover rounded-lg" src="/images/pushup.avif" alt="Pushup Image not Found">
-        </a>
-        <div class="w-full h-30 bg-zinc-500 p-2 rounded-lg mt-3">
-          <ul class="text-emerald-100">
-            <li>-> It is the exercise mainly targetting for chest and triceps.</li>
-          </ul>
+        <div class="workoutcard w-80 h-112 bg-zinc-800 rounded-lg mt-4 ml-3 p-2">
+          <h5 class="font-bold p-1 text-green-500">Pushups</h5>
+            <img class="w-full h-50 object-cover rounded-lg" src="/images/pushup.avif" alt="Pushup Image not Found">
+            <div class="w-full h-30 bg-zinc-500 p-2 rounded-lg mt-3">
+              <ul class="text-emerald-100">
+                <li>-> It is the exercise mainly targetting for chest and triceps.</li>
+              </ul>
+            </div>
+          </a>
         </div>
-      </div>
 
-      <div class="workoutcard w-80 h-112 bg-zinc-800 rounded-lg mt-4 ml-3 p-2">
-        <h5 class="font-bold p-1 text-green-500">Bicep Curls</h5>
-        <a href="/exercise/workout?type=biceps">
-          <img class="w-full h-50 object-cover rounded-lg" src="/images/biceps.jpg" alt="Bicep Curl Image not Found">
-        </a>
-        <div class="w-full h-30 bg-zinc-500 p-2 rounded-lg mt-3">
-          <ul class="text-emerald-100">
-            <li>-> It is the exercise mainly targetting for biceps and forearms.</li>
-          </ul>
+        <div class="workoutcard w-80 h-112 bg-zinc-800 rounded-lg mt-4 ml-3 p-2">
+          <a href="/exercise/workout?type=biceps">
+          <h5 class="font-bold p-1 text-green-500">Bicep Curls</h5>
+            <img class="w-full h-50 object-cover rounded-lg" src="/images/biceps.jpg" alt="Bicep Curl Image not Found">
+            <div class="w-full h-30 bg-zinc-500 p-2 rounded-lg mt-3">
+              <ul class="text-emerald-100">
+                <li>-> It is the exercise mainly targetting for biceps and forearms.</li>
+              </ul>
+            </div>
+          </a>
         </div>
-      </div>
 
-      <div class="workoutcard w-80 h-112 bg-zinc-800 rounded-lg mt-4 ml-3 p-2">
-        <h5 class="font-bold p-1 text-green-500">Situps</h5>
-        <a href="/exercise/workout?type=situp">
-          <img class="w-full h-50 object-cover rounded-lg" src="/images/situps.jpg" alt="Situp Image not Found">
-        </a>
-        <div class="w-full h-30 bg-zinc-500 p-2 rounded-lg mt-3">
-          <ul class="text-emerald-100">
-            <li>-> It is the exercise mainly targetting for core and abdominal muscles.</li>
-          </ul>
+        <div class="workoutcard w-80 h-112 bg-zinc-800 rounded-lg mt-4 ml-3 p-2">
+          <a href="/exercise/workout?type=situp">
+          <h5 class="font-bold p-1 text-green-500">Situps</h5>
+            <img class="w-full h-50 object-cover rounded-lg" src="/images/situps.jpg" alt="Situp Image not Found">
+            <div class="w-full h-30 bg-zinc-500 p-2 rounded-lg mt-3">
+              <ul class="text-emerald-100">
+                <li>-> It is the exercise mainly targetting for core and abdominal muscles.</li>
+              </ul>
+            </div>
+          </a>
+        </div>
+
+        <div class="workoutcard w-80 h-112 bg-zinc-800 rounded-lg mt-4 ml-3 p-2">
+          <a href="/exercise/workout?type=squats">
+          <h5 class="font-bold p-1 text-green-500">Squats</h5>
+            <img class="w-full h-50 object-cover rounded-lg" src="/images/squats.jpg" alt="Squat Image not Found">
+            <div class="w-full h-30 bg-zinc-500 p-2 rounded-lg mt-3">
+              <ul class="text-emerald-100">
+                <li>-> It is the exercise mainly targetting for legs, glutes, and core muscles.</li>
+              </ul>
+            </div>
+          </a>
+        </div>
+
+        <div class="workoutcard w-80 h-112 bg-zinc-800 rounded-lg mt-4 ml-3 p-2">
+          <a href="/exercise/workout?type=shoulderPress">
+          <h5 class="font-bold p-1 text-green-500">Shoulder Press</h5>
+            <img class="w-full h-50 object-cover rounded-lg" src="/images/shoulderPress.webp" alt="Shoulder Press Image not Found">
+            <div class="w-full h-30 bg-zinc-500 p-2 rounded-lg mt-3">
+              <ul class="text-emerald-100">
+                <li>-> It is the exercise mainly targetting for shoulders and upper body strength.</li>
+              </ul>
+            </div>
+          </a>
         </div>
       </div>
     </div>
-  </div>  
+
+    <!-- Flip Cards  -->
+    <div class="flex flex-row justify-center gap-8 mt-10 cursor-pointer">
+      <!-- Beginner Flip Card -->
+      <div class="group [perspective:1000px] w-96 h-100 mb-8 relative">
+        <div class="relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+          <!-- Front Side -->
+          <div class="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-950 rounded-2xl p-8 flex flex-col items-center justify-center text-center shadow-2xl border-2 border-cyan-700 backface-hidden">
+            <h2 class="text-4xl font-extrabold tracking-wide mb-2 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent animate-pulse drop-shadow-[0_0_16px_#22d3ee]">Beginner</h2>
+            <p class="text-gray-300 text-lg mt-2">Hover to see workouts for beginners</p>
+          </div>
+          <!-- Back Side -->
+          <div class="absolute inset-0 bg-gradient-to-br from-gray-950 to-gray-800 rounded-2xl p-8 text-white [transform:rotateY(180deg)] flex flex-col justify-center items-center backface-hidden">
+            <h3 class="text-2xl font-semibold text-cyan-400 mb-4 border-b border-cyan-500 pb-2 w-full text-center">Your Workout Plan</h3>
+            <ul class="text-lg space-y-2 text-left w-full max-w-xs mx-auto">
+              <li><span class="text-yellow-300">Pushups</span> - <span class="text-cyan-300">10 reps</span></li>
+              <li><span class="text-yellow-300">Bicep Curl</span> - <span class="text-cyan-300">10 reps</span></li>
+              <li><span class="text-yellow-300">Situps</span> - <span class="text-cyan-300">10 reps</span></li>
+              <li><span class="text-yellow-300">Squats</span> - <span class="text-cyan-300">10 reps</span></li>
+              <li><span class="text-yellow-300">Shoulder Press</span> - <span class="text-cyan-300">5 reps</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Intermediate Flip Card -->
+      <div class="group [perspective:1000px] w-96 h-100 mb-8 relative">
+        <div class="relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+          <!-- Front Side -->
+          <div class="absolute inset-0 bg-gradient-to-br from-gray-900 via-green-800 to-gray-950 rounded-2xl p-8 flex flex-col items-center justify-center text-center shadow-2xl border-2 border-green-500 backface-hidden">
+            <h2 class="text-4xl font-extrabold tracking-wide mb-2 bg-gradient-to-r from-green-400 via-lime-400 to-emerald-500 bg-clip-text text-transparent animate-pulse drop-shadow-[0_0_16px_#22d3ee]">Intermediate</h2>
+            <p class="text-gray-300 text-lg mt-2">Hover to see workouts for intermediate</p>
+          </div>
+          <!-- Back Side -->
+          <div class="absolute inset-0 bg-gradient-to-br from-gray-950 to-gray-800 rounded-2xl p-8 text-white [transform:rotateY(180deg)] flex flex-col justify-center items-center backface-hidden">
+            <h3 class="text-2xl font-semibold text-green-400 mb-4 border-b border-green-500 pb-2 w-full text-center">Your Workout Plan</h3>
+            <ul class="text-lg space-y-2 text-left w-full max-w-xs mx-auto">
+              <li><span class="text-yellow-300">Pushups</span> - <span class="text-green-300">20 reps</span></li>
+              <li><span class="text-yellow-300">Bicep Curl</span> - <span class="text-green-300">15 reps</span></li>
+              <li><span class="text-yellow-300">Situps</span> - <span class="text-green-300">20 reps</span></li>
+              <li><span class="text-yellow-300">Squats</span> - <span class="text-green-300">20 reps</span></li>
+              <li><span class="text-yellow-300">Shoulder Press</span> - <span class="text-green-300">10 reps</span></li>
+              <li><span class="text-yellow-300">Plank</span> - <span class="text-green-300">1 min</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Advanced Flip Card -->
+      <div class="group [perspective:1000px] w-96 h-100 mb-8 relative">
+        <div class="relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+          <!-- Front Side -->
+          <div class="absolute inset-0 bg-gradient-to-br from-gray-900 via-red-800 to-gray-950 rounded-2xl p-8 flex flex-col items-center justify-center text-center shadow-2xl border-2 border-red-500 backface-hidden">
+            <h2 class="text-4xl font-extrabold tracking-wide mb-2 bg-gradient-to-r from-red-400 via-pink-500 to-yellow-300 bg-clip-text text-transparent animate-pulse drop-shadow-[0_0_16px_#f87171]">Advanced</h2>
+            <p class="text-gray-300 text-lg mt-2">Hover to see workouts for advanced</p>
+          </div>
+          <!-- Back Side -->
+          <div class="absolute inset-0 bg-gradient-to-br from-gray-950 to-gray-800 rounded-2xl p-8 text-white [transform:rotateY(180deg)] flex flex-col justify-center items-center backface-hidden">
+            <h3 class="text-2xl font-semibold text-red-400 mb-4 border-b border-red-500 pb-2 w-full text-center">Your Workout Plan</h3>
+            <ul class="text-lg space-y-2 text-left w-full max-w-xs mx-auto">
+              <li><span class="text-yellow-300">Pushups</span> - <span class="text-red-300">30 reps</span></li>
+              <li><span class="text-yellow-300">Bicep Curl</span> - <span class="text-red-300">20 reps</span></li>
+              <li><span class="text-yellow-300">Situps</span> - <span class="text-red-300">30 reps</span></li>
+              <li><span class="text-yellow-300">Squats</span> - <span class="text-red-300">30 reps</span></li>
+              <li><span class="text-yellow-300">Shoulder Press</span> - <span class="text-red-300">15 reps</span></li>
+              <li><span class="text-yellow-300">Plank</span> - <span class="text-red-300">2 min</span></li>
+              <li><span class="text-yellow-300">Burpees</span> - <span class="text-red-300">20 reps</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
 
